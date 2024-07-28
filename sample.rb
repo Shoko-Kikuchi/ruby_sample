@@ -5,23 +5,7 @@ while true
   puts "3:やめる"
   num = gets.to_i
 
-  case num
-  when 1
-    puts "1から5で評価を入力してください"
-    point = gets.to_i
-    hogehoge(point) 
-  when 2
-    puts "これまでの結果"
-    result
-  when 3
-    puts "終了します"
-    break
-  else
-    puts "1から3で入力してください"
-  end
-end
-
-def hogehoge(point)
+  def hogehoge(point)
   while true
     if point <= 0 || point > 5
       puts "1から5で入力してください"
@@ -43,5 +27,21 @@ def result
     file.each_line do |line|
       puts line
     end
+  end
+end
+
+  case num
+  when 1
+    puts "1から5で評価を入力してください"
+    point = gets.to_i
+    hogehoge(point) 
+  when 2
+    puts "これまでの結果"
+    result
+  when 3
+    puts "終了します"
+    break
+  else
+    puts "1から3で入力してください"
   end
 end
